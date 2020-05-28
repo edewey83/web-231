@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<title> My First Try at Java</title>
+<!--
+*Title: Assignment 1.1
+*Author: Professor Krasso
+*Date: 27 May 2020
+*Modified By: Elizabeth Dewey
+*Description: My First Javascript With Errors
+//-->
+
+<script type="text/javascript">
+function updateResults(){  
+var elResults = Document.getElementById('results'); //Find the element results, and store it in elresults
+// find the element ID 'fiction' and store it as variable elFiction
+var elFiction = document.getElementById('fiction'); 
+//we don't have to retrieve nonFiction becaue there's only two options
+//updates the 'results' elememt based on the radio choice
+//check if fiction is marked
+if (elFiction.checked) 
+{
+    elResults.innerText ='Book 1, Book 2, Book 3';
+} 
+    else //asume "non-fiction" is marked.
+    {
+      elResults.innerText ='Book 4, Book 5, Book 6';  
+    }
+
+    </script>
+
+</head>
+<body>
+    <div>
+        <label for="fiction">Fiction</label>
+        <input id="fiction" type="radio" name="genre" value="fiction" onclick="updateResults();" /> 
+        <label for="nonfiction">Non Fiction</label>
+        <input id="nonfiction" type="radio" name="genre" value="nonfiction" onclick="updateResults();" />
+    </div>
+    <div id="results" />
+
+</body>
+</html>
